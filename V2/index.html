@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Michael Maples - NASCAR ARCA Series Driver #99 | Maples Motorsports Official Website">
+    <title>Michael Maples Racing | NASCAR ARCA Series Driver #99</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Michroma&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button id="langBtn" class="lang-btn" aria-label="Switch Language">
+            <span class="flag-icon">🇺🇸</span>
+            <span id="currentLang">EN</span>
+        </button>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-number">99</div>
+            <div class="loading-text" data-en="Loading..." data-es="Cargando...">Loading...</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-number">#99</span>
+                <span class="logo-text">MAPLES MOTORSPORTS</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link" data-en="Home" data-es="Inicio">Home</a>
+                <a href="#about" class="nav-link" data-en="About" data-es="Acerca">About</a>
+                <a href="#stats" class="nav-link" data-en="Stats" data-es="Estadísticas">Stats</a>
+                <a href="#gallery" class="nav-link" data-en="Gallery" data-es="Galería">Gallery</a>
+                <a href="#team" class="nav-link" data-en="Team" data-es="Equipo">Team</a>
+                <a href="#contact" class="nav-link" data-en="Contact" data-es="Contacto">Contact</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="video-background">
+            <video autoplay muted loop playsinline id="heroVideo">
+                <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        
+        <!-- Particle System -->
+        <canvas id="particles"></canvas>
+        
+        <div class="hero-content">
+            <div class="hero-number" data-aos="zoom-in">99</div>
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+                <span data-en="MICHAEL MAPLES" data-es="MICHAEL MAPLES">MICHAEL MAPLES</span>
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="400" data-en="NASCAR ARCA Series Driver | Maples Motorsports Owner" data-es="Piloto NASCAR ARCA Series | Dueño de Maples Motorsports">
+                NASCAR ARCA Series Driver | Maples Motorsports Owner
+            </p>
+            <div class="hero-stats-mini" data-aos="fade-up" data-aos-delay="600">
+                <div class="stat-mini">
+                    <span class="stat-value">40</span>
+                    <span class="stat-label" data-en="RACES" data-es="CARRERAS">RACES</span>
+                </div>
+                <div class="stat-mini">
+                    <span class="stat-value">7th</span>
+                    <span class="stat-label" data-en="2025 STANDING" data-es="POSICIÓN 2025">2025 STANDING</span>
+                </div>
+                <div class="stat-mini">
+                    <span class="stat-value">1</span>
+                    <span class="stat-label" data-en="TOP 10" data-es="TOP 10">TOP 10</span>
+                </div>
+            </div>
+            <div class="hero-cta" data-aos="fade-up" data-aos-delay="800">
+                <a href="#contact" class="cta-btn primary" data-en="Contact Team" data-es="Contactar Equipo">Contact Team</a>
+                <a href="#about" class="cta-btn secondary" data-en="Learn More" data-es="Conocer Más">Learn More</a>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator" data-aos="fade-up" data-aos-delay="1000">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-en="THE DRIVER" data-es="EL PILOTO">THE DRIVER</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right">
+                    <h3 data-en="From Oklahoma Dirt to NASCAR ARCA" data-es="De Oklahoma a NASCAR ARCA">From Oklahoma Dirt to NASCAR ARCA</h3>
+                    <p data-en="Michael Maples is a 62-year-old racing veteran from Choctaw, Oklahoma. His passion for motorsports began in 1993 with asphalt late model racing in California. After a 21-year hiatus to focus on family, he returned to racing in 2019 with IMCA modifieds." data-es="Michael Maples es un veterano de carreras de 62 años de Choctaw, Oklahoma. Su pasión por el automovilismo comenzó en 1993 con carreras de modelos tardíos en California. Después de 21 años de pausa para enfocarse en su familia, regresó en 2019 con IMCA modifieds.">
+                        Michael Maples is a 62-year-old racing veteran from Choctaw, Oklahoma. His passion for motorsports began in 1993 with asphalt late model racing in California. After a 21-year hiatus to focus on family, he returned to racing in 2019 with IMCA modifieds.
+                    </p>
+                    <p data-en="In 2024, Michael made his dream a reality by entering the ARCA Menards Series with Fast Track Racing. His debut season showed consistent performance and determination, finishing 8th in points with a best finish of 11th." data-es="En 2024, Michael hizo realidad su sueño al ingresar a la Serie ARCA Menards con Fast Track Racing. Su temporada de debut mostró rendimiento constante y determinación, terminando 8vo en puntos con un mejor resultado de 11mo.">
+                        In 2024, Michael made his dream a reality by entering the ARCA Menards Series with Fast Track Racing. His debut season showed consistent performance and determination, finishing 8th in points with a best finish of 11th.
+                    </p>
+                    <p data-en="For 2025, Michael took the ultimate step by forming his own team - Maples Motorsports. As both driver and owner of the #99 Chevrolet, he's building a competitive organization from the ground up, finishing 7th in the championship." data-es="Para 2025, Michael dio el paso definitivo al formar su propio equipo: Maples Motorsports. Como piloto y dueño del Chevrolet #99, está construyendo una organización competitiva desde cero, terminando 7mo en el campeonato.">
+                        For 2025, Michael took the ultimate step by forming his own team - Maples Motorsports. As both driver and owner of the #99 Chevrolet, he's building a competitive organization from the ground up, finishing 7th in the championship.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-flag-checkered"></i>
+                            <span data-en="Full-time ARCA Driver" data-es="Piloto ARCA Tiempo Completo">Full-time ARCA Driver</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-trophy"></i>
+                            <span data-en="Team Owner & Founder" data-es="Dueño y Fundador del Equipo">Team Owner & Founder</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-home"></i>
+                            <span data-en="Choctaw, Oklahoma" data-es="Choctaw, Oklahoma">Choctaw, Oklahoma</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-image" data-aos="fade-left">
+                    <div class="image-frame">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=H7pVL1k5w0e%2Fbs1GUOQrQ%2FVUhYhf6m663UcZajTww10BNgzqkzQHHAJVBEPu57MgnHb%2BNwHFsPLv4m7sA32L2Kpsy89DLoN8Myym2hM0O6eeCNad3HGzOaWzSVQYM%2BNF0p2zqvfgIw%3D%3D&u2=p7ujTUlMjQwONo4F&width=800" alt="Michael Maples">
+                        <div class="image-badge">
+                            <span class="badge-number">#99</span>
+                            <span class="badge-text">DRIVER</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-en="CAREER STATISTICS" data-es="ESTADÍSTICAS DE CARRERA">CAREER STATISTICS</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="stat-icon">
+                        <i class="fas fa-flag-checkered"></i>
+                    </div>
+                    <div class="stat-number" data-target="40">0</div>
+                    <div class="stat-label" data-en="ARCA RACES" data-es="CARRERAS ARCA">ARCA RACES</div>
+                    <div class="stat-description" data-en="2024-2025 Seasons" data-es="Temporadas 2024-2025">2024-2025 Seasons</div>
+                </div>
+                
+                <div class="stat-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-number" data-target="1">0</div>
+                    <div class="stat-label" data-en="TOP 10 FINISHES" data-es="FINALES TOP 10">TOP 10 FINISHES</div>
+                    <div class="stat-description" data-en="DuQuoin 2025" data-es="DuQuoin 2025">DuQuoin 2025</div>
+                </div>
+                
+                <div class="stat-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="stat-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <div class="stat-number"><span data-target="7">0</span><span class="stat-suffix">th</span></div>
+                    <div class="stat-label" data-en="2025 POINTS STANDING" data-es="POSICIÓN 2025">2025 POINTS STANDING</div>
+                    <div class="stat-description" data-en="Championship Finish" data-es="Final del Campeonato">Championship Finish</div>
+                </div>
+                
+                <div class="stat-card" data-aos="flip-left" data-aos-delay="400">
+                    <div class="stat-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <div class="stat-number" data-target="200">0</div>
+                    <div class="stat-label" data-en="MPH TOP SPEED" data-es="VELOCIDAD MÁXIMA">MPH TOP SPEED</div>
+                    <div class="stat-description" data-en="Superspeedway Racing" data-es="Carreras en Superspeedway">Superspeedway Racing</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Car Gallery Section -->
+    <section id="car-gallery" class="car-gallery-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-en="THE #99 CHEVROLET" data-es="EL CHEVROLET #99">THE #99 CHEVROLET</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="car-gallery-grid">
+                <div class="car-view-card" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://sspark.genspark.ai/cfimages?u1=oa2U0%2BzkkXJKI3VMXWD5TKxNhxso0d17UpxKWBHJU3arFtqz0xHLjhkWuIUid%2Bej9GXRHYw0NbJJDe%2BS%2BRS%2FjpK2NFB80RNTKXlacIjnZy880lJ%2FhHD26pV5uTch7jdRJw0kQxWtdgUz7pJ9TPFs2vuTwRN8uldZTy9nauTdl3M49dZ3K7WXOCOPQh4fVs4L0uoFDJDv06ji31NOptIXu8pqVvvugwHnRdkrNDWvjAyMIHjsOAwszqPFGe6JDDIDPp4RYG23BCDY&u2=Ffp18za0UVZ%2FpTeI&width=800" alt="Car Side View">
+                    <div class="view-label" data-en="SIDE VIEW" data-es="VISTA LATERAL">SIDE VIEW</div>
+                </div>
+                
+                <div class="car-view-card" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://sspark.genspark.ai/cfimages?u1=J5bzZ5gflAxKkQNO4D1gOB7pqAumJniIVAWZaBQa9gaxFdZDiH%2FVP0DkkvhlcuGaHXFtwLEZajWLJTOjKabgpBajU5KkORkhj6TslPGh%2FcEfzsS3FBdfIdVh40q3CUpuxoVngqSBGawUlVsYZg%2FnmeQbED4g&u2=nrCe%2F76MtPOgadq4&width=800" alt="Car Front View">
+                    <div class="view-label" data-en="FRONT VIEW" data-es="VISTA FRONTAL">FRONT VIEW</div>
+                </div>
+                
+                <div class="car-view-card" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://sspark.genspark.ai/cfimages?u1=zzv4S2WKXMzI0ZauLrW6k%2FH4Y2MXThS9vXY9HniOJyyFeVIL0Xv4iZUPEvzP46%2B%2F67hZRUaPZ8fAbMqo6H8l&u2=RtJIz5is4E%2FxXs%2BS&width=800" alt="Car Rear View">
+                    <div class="view-label" data-en="REAR VIEW" data-es="VISTA TRASERA">REAR VIEW</div>
+                </div>
+                
+                <div class="car-view-card" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="https://sspark.genspark.ai/cfimages?u1=hDs7bDd6d%2Fes88JWPT1eeyxP%2FBsuQVoDPc3rCsxX3FHRqRfj3IM0O7V3Npb2Ihebo2omngRO1VgTfyaYFOAY&u2=S4uBLWzAp9Cz5mZk&width=800" alt="Car Detail">
+                    <div class="view-label" data-en="DETAIL VIEW" data-es="VISTA DETALLE">DETAIL VIEW</div>
+                </div>
+                
+                <div class="car-view-card" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="https://sspark.genspark.ai/cfimages?u1=wGTIy4qYuMmf2EBAXH%2FEJa6pIO9XZ5Ge8unw4rTpl4VESoIbKD4Z4oKhf%2FKhQ%2BygX%2FDlRVjgIqPfcHVoil6y3jYhmpdtdwvsfyYXDeS8Y%2FeeaC%2BxGfBgrcBzJqV1tgqQA6E3kcpGLr0dDqDA6xjE%2B%2B1SxCMpu4GvMVgSfeNzgdvcTHBD%2FWe%2Fdg%3D%3D&u2=2jjRAkpuC6if1bAT&width=800" alt="Driver Portrait">
+                    <div class="view-label" data-en="DRIVER PORTRAIT" data-es="RETRATO DEL PILOTO">DRIVER PORTRAIT</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-en="RACING JOURNEY" data-es="TRAYECTORIA">RACING JOURNEY</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1993</div>
+                        <h3 data-en="Racing Career Begins" data-es="Inicio de Carrera">Racing Career Begins</h3>
+                        <p data-en="Started racing asphalt late models at Madera Speedway in California" data-es="Comenzó carreras de modelos tardíos en asfalto en Madera Speedway en California">Started racing asphalt late models at Madera Speedway in California</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1998-2019</div>
+                        <h3 data-en="Family First" data-es="Familia Primero">Family First</h3>
+                        <p data-en="Took a 21-year break from racing to focus on family and business" data-es="Tomó un descanso de 21 años de las carreras para enfocarse en la familia y los negocios">Took a 21-year break from racing to focus on family and business</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2019</div>
+                        <h3 data-en="Return to Racing" data-es="Regreso a las Carreras">Return to Racing</h3>
+                        <p data-en="Returned to motorsports competing in IMCA Southern Sport Modifieds in Oklahoma" data-es="Regresó al automovilismo compitiendo en IMCA Southern Sport Modifieds en Oklahoma">Returned to motorsports competing in IMCA Southern Sport Modifieds in Oklahoma</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2024</div>
+                        <h3 data-en="ARCA Debut" data-es="Debut en ARCA">ARCA Debut</h3>
+                        <p data-en="Made full-time ARCA debut with Fast Track Racing, finished 8th in points" data-es="Debutó tiempo completo en ARCA con Fast Track Racing, terminó 8vo en puntos">Made full-time ARCA debut with Fast Track Racing, finished 8th in points</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2025</div>
+                        <h3 data-en="Maples Motorsports Founded" data-es="Fundación de Maples Motorsports">Maples Motorsports Founded</h3>
+                        <p data-en="Formed own team, competes as driver/owner in #99 Chevrolet, finished 7th in championship" data-es="Formó su propio equipo, compite como piloto/dueño en el Chevrolet #99, terminó 7mo en el campeonato">Formed own team, competes as driver/owner in #99 Chevrolet, finished 7th in championship</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container-fluid">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-en="RACE GALLERY" data-es="GALERÍA DE CARRERAS">RACE GALLERY</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <!-- Desktop Gallery Grid -->
+            <div class="gallery-grid desktop-gallery">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://sspark.genspark.ai/cfimages?u1=oa2U0%2BzkkXJKI3VMXWD5TKxNhxso0d17UpxKWBHJU3arFtqz0xHLjhkWuIUid%2Bej9GXRHYw0NbJJDe%2BS%2BRS%2FjpK2NFB80RNTKXlacIjnZy880lJ%2FhHD26pV5uTch7jdRJw0kQxWtdgUz7pJ9TPFs2vuTwRN8uldZTy9nauTdl3M49dZ3K7WXOCOPQh4fVs4L0uoFDJDv06ji31NOptIXu8pqVvvugwHnRdkrNDWvjAyMIHjsOAwszqPFGe6JDDIDPp4RYG23BCDY&u2=Ffp18za0UVZ%2FpTeI&width=1200" alt="NASCAR Race Action">
+                    <div class="gallery-overlay">
+                        <h3 data-en="On Track Action" data-es="Acción en Pista">On Track Action</h3>
+                        <p data-en="Nashville Fairgrounds Speedway" data-es="Nashville Fairgrounds Speedway">Nashville Fairgrounds Speedway</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://sspark.genspark.ai/cfimages?u1=J5bzZ5gflAxKkQNO4D1gOB7pqAumJniIVAWZaBQa9gaxFdZDiH%2FVP0DkkvhlcuGaHXFtwLEZajWLJTOjKabgpBajU5KkORkhj6TslPGh%2FcEfzsS3FBdfIdVh40q3CUpuxoVngqSBGawUlVsYZg%2FnmeQbED4g&u2=nrCe%2F76MtPOgadq4&width=1200" alt="Team Portrait">
+                    <div class="gallery-overlay">
+                        <h3 data-en="Maples Motorsports" data-es="Maples Motorsports">Maples Motorsports</h3>
+                        <p data-en="Team Owner Michael Maples" data-es="Dueño del Equipo Michael Maples">Team Owner Michael Maples</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://sspark.genspark.ai/cfimages?u1=wGTIy4qYuMmf2EBAXH%2FEJa6pIO9XZ5Ge8unw4rTpl4VESoIbKD4Z4oKhf%2FKhQ%2BygX%2FDlRVjgIqPfcHVoil6y3jYhmpdtdwvsfyYXDeS8Y%2FeeaC%2BxGfBgrcBzJqV1tgqQA6E3kcpGLr0dDqDA6xjE%2B%2B1SxCMpu4GvMVgSfeNzgdvcTHBD%2FWe%2Fdg%3D%3D&u2=2jjRAkpuC6if1bAT&width=1200" alt="Driver Portrait">
+                    <div class="gallery-overlay">
+                        <h3 data-en="Michael Maples #99" data-es="Michael Maples #99">Michael Maples #99</h3>
+                        <p data-en="Ready to Race" data-es="Listo para Correr">Ready to Race</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="https://sspark.genspark.ai/cfimages?u1=zzv4S2WKXMzI0ZauLrW6k%2FH4Y2MXThS9vXY9HniOJyyFeVIL0Xv4iZUPEvzP46%2B%2F67hZRUaPZ8fAbMqo6H8l&u2=RtJIz5is4E%2FxXs%2BS&width=1200" alt="DonRay Petroleum #99">
+                    <div class="gallery-overlay">
+                        <h3 data-en="#99 Chevrolet" data-es="Chevrolet #99">#99 Chevrolet</h3>
+                        <p data-en="DonRay Petroleum Sponsorship" data-es="Patrocinio DonRay Petroleum">DonRay Petroleum Sponsorship</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="https://sspark.genspark.ai/cfimages?u1=hDs7bDd6d%2Fes88JWPT1eeyxP%2FBsuQVoDPc3rCsxX3FHRqRfj3IM0O7V3Npb2Ihebo2omngRO1VgTfyaYFOAY&u2=S4uBLWzAp9Cz5mZk&width=1200" alt="Pit Stop">
+                    <div class="gallery-overlay">
+                        <h3 data-en="Pit Stop Action" data-es="Acción en Boxes">Pit Stop Action</h3>
+                        <p data-en="Team at Work" data-es="Equipo en Acción">Team at Work</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="https://sspark.genspark.ai/cfimages?u1=6k%2BLzWqYE92R3KZM0OVMkwcHC7kChTTqDZjHKs1eHbYLtyVsapv2Vb27z8CfEJaPc3H0slnmgLCQVXSKrQmiN%2Fk3CDeKORmk3Hrf88kLY%2FnxxI1oFMobYB1uZw%3D%3D&u2=zJtgVeOBHeqHMysX&width=1200" alt="Michael Maples Profile">
+                    <div class="gallery-overlay">
+                        <h3 data-en="The Driver" data-es="El Piloto">The Driver</h3>
+                        <p data-en="Focused and Ready" data-es="Concentrado y Listo">Focused and Ready</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Carousel -->
+            <div class="gallery-carousel mobile-gallery">
+                <div class="carousel-container">
+                    <button class="carousel-btn prev" aria-label="Previous">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    
+                    <div class="carousel-track-container">
+                        <div class="carousel-track">
+                            <div class="carousel-slide">
+                                <img src="https://sspark.genspark.ai/cfimages?u1=oa2U0%2BzkkXJKI3VMXWD5TKxNhxso0d17UpxKWBHJU3arFtqz0xHLjhkWuIUid%2Bej9GXRHYw0NbJJDe%2BS%2BRS%2FjpK2NFB80RNTKXlacIjnZy880lJ%2FhHD26pV5uTch7jdRJw0kQxWtdgUz7pJ9TPFs2vuTwRN8uldZTy9nauTdl3M49dZ3K7WXOCOPQh4fVs4L0uoFDJDv06ji31NOptIXu8pqVvvugwHnRdkrNDWvjAyMIHjsOAwszqPFGe6JDDIDPp4RYG23BCDY&u2=Ffp18za0UVZ%2FpTeI&width=1200" alt="NASCAR Race Action">
+                                <div class="carousel-caption">
+                                    <h3 data-en="On Track Action" data-es="Acción en Pista">On Track Action</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://sspark.genspark.ai/cfimages?u1=J5bzZ5gflAxKkQNO4D1gOB7pqAumJniIVAWZaBQa9gaxFdZDiH%2FVP0DkkvhlcuGaHXFtwLEZajWLJTOjKabgpBajU5KkORkhj6TslPGh%2FcEfzsS3FBdfIdVh40q3CUpuxoVngqSBGawUlVsYZg%2FnmeQbED4g&u2=nrCe%2F76MtPOgadq4&width=1200" alt="Team Portrait">
+                                <div class="carousel-caption">
+                                    <h3 data-en="Maples Motorsports" data-es="Maples Motorsports">Maples Motorsports</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://sspark.genspark.ai/cfimages?u1=wGTIy4qYuMmf2EBAXH%2FEJa6pIO9XZ5Ge8unw4rTpl4VESoIbKD4Z4oKhf%2FKhQ%2BygX%2FDlRVjgIqPfcHVoil6y3jYhmpdtdwvsfyYXDeS8Y%2FeeaC%2BxGfBgrcBzJqV1tgqQA6E3kcpGLr0dDqDA6xjE%2B%2B1SxCMpu4GvMVgSfeNzgdvcTHBD%2FWe%2Fdg%3D%3D&u2=2jjRAkpuC6if1bAT&width=1200" alt="Driver Portrait">
+                                <div class="carousel-caption">
+                                    <h3 data-en="Michael Maples #99" data-es="Michael Maples #99">Michael Maples #99</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://sspark.genspark.ai/cfimages?u1=zzv4S2WKXMzI0ZauLrW6k%2FH4Y2MXThS9vXY9HniOJyyFeVIL0Xv4iZUPEvzP46%2B%2F67hZRUaPZ8fAbMqo6H8l&u2=RtJIz5is4E%2FxXs%2BS&width=1200" alt="DonRay Petroleum #99">
+                                <div class="carousel-caption">
+                                    <h3 data-en="#99 Chevrolet" data-es="Chevrolet #99">#99 Chevrolet</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://sspark.genspark.ai/cfimages?u1=hDs7bDd6d%2Fes88JWPT1eeyxP%2FBsuQVoDPc3rCsxX3FHRqRfj3IM0O7V3Npb2Ihebo2omngRO1VgTfyaYFOAY&u2=S4uBLWzAp9Cz5mZk&width=1200" alt="Pit Stop">
+                                <div class="carousel-caption">
+                                    <h3 data-en="Pit Stop Action" data-es="Acción en Boxes">Pit Stop Action</h3>
+                                </div>
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="https://sspark.genspark.ai/cfimages?u1=6k%2BLzWqYE92R3KZM0OVMkwcHC7kChTTqDZjHKs1eHbYLtyVsapv2Vb27z8CfEJaPc3H0slnmgLCQVXSKrQmiN%2Fk3CDeKORmk3Hrf88kLY%2FnxxI1oFMobYB1uZw%3D%3D&u2=zJtgVeOBHeqHMysX&width=1200" alt="Michael Maples Profile">
+                                <div class="carousel-caption">
+                                    <h3 data-en="The Driver" data-es="El Piloto">The Driver</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-btn next" aria-label="Next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                
+                <div class="carousel-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-en="THE TEAM" data-es="EL EQUIPO">THE TEAM</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="team-grid">
+                <!-- Michael Maples -->
+                <div class="team-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="team-image">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=H7pVL1k5w0e%2Fbs1GUOQrQ%2FVUhYhf6m663UcZajTww10BNgzqkzQHHAJVBEPu57MgnHb%2BNwHFsPLv4m7sA32L2Kpsy89DLoN8Myym2hM0O6eeCNad3HGzOaWzSVQYM%2BNF0p2zqvfgIw%3D%3D&u2=p7ujTUlMjQwONo4F&width=800" alt="Michael Maples">
+                        <div class="team-overlay">
+                            <div class="team-social">
+                                <a href="https://www.instagram.com/maples.motorsports/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">MICHAEL MAPLES</h3>
+                        <p class="team-role" data-en="DRIVER & TEAM OWNER" data-es="PILOTO Y DUEÑO">DRIVER & TEAM OWNER</p>
+                        <div class="team-number">#99</div>
+                        <p class="team-bio" data-en="From Choctaw, Oklahoma. Racing veteran with passion and determination to compete at the highest level." data-es="De Choctaw, Oklahoma. Veterano de carreras con pasión y determinación para competir al más alto nivel.">
+                            From Choctaw, Oklahoma. Racing veteran with passion and determination to compete at the highest level.
+                        </p>
+                        <div class="team-stats-mini">
+                            <span><i class="fas fa-flag-checkered"></i> 40 <span data-en="Races" data-es="Carreras">Races</span></span>
+                            <span><i class="fas fa-trophy"></i> 7th <span data-en="2025" data-es="2025">2025</span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Jeremy Petty -->
+                <div class="team-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1566753323558-f4e0952af115?w=800&auto=format&fit=crop&q=60" alt="Jeremy Petty">
+                        <div class="team-overlay">
+                            <div class="team-social">
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">JEREMY PETTY</h3>
+                        <p class="team-role" data-en="DIRECTOR OF COMPETITION" data-es="DIRECTOR DE COMPETICIÓN">DIRECTOR OF COMPETITION</p>
+                        <div class="team-number">CREW CHIEF</div>
+                        <p class="team-bio" data-en="Former ARCA and NASCAR driver. Years of experience as Crew Chief leading teams to success." data-es="Ex-piloto de ARCA y NASCAR. Años de experiencia como Crew Chief llevando equipos al éxito.">
+                            Former ARCA and NASCAR driver. Years of experience as Crew Chief leading teams to success.
+                        </p>
+                        <div class="team-stats-mini">
+                            <span><i class="fas fa-tools"></i> Crew Chief</span>
+                            <span><i class="fas fa-medal"></i> <span data-en="NASCAR Experience" data-es="Experiencia NASCAR">NASCAR Experience</span></span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ryan Roulette -->
+                <div class="team-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="team-image">
+                        <img src="https://images.unsplash.com/photo-1558222218-b7b54eede3f3?w=800&auto=format&fit=crop&q=60" alt="Ryan Roulette">
+                        <div class="team-overlay">
+                            <div class="team-social">
+                                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">RYAN ROULETTE</h3>
+                        <p class="team-role" data-en="DRIVER" data-es="PILOTO">DRIVER</p>
+                        <div class="team-number">#67</div>
+                        <p class="team-bio" data-en="Part-time driver for Maples Motorsports. Military veteran with proven race craft and determination." data-es="Piloto part-time para Maples Motorsports. Veterano militar con habilidad probada en carreras y determinación.">
+                            Part-time driver for Maples Motorsports. Military veteran with proven race craft and determination.
+                        </p>
+                        <div class="team-stats-mini">
+                            <span><i class="fas fa-car"></i> #67</span>
+                            <span><i class="fas fa-flag-usa"></i> <span data-en="Veteran" data-es="Veterano">Veteran</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title" data-en="GET IN TOUCH" data-es="CONTÁCTANOS">GET IN TOUCH</h2>
+                <div class="title-underline"></div>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3 data-en="Location" data-es="Ubicación">Location</h3>
+                            <p>Choctaw, Oklahoma</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3 data-en="Email" data-es="Email">Email</h3>
+                            <p>contact@maplesmotorsports.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3 data-en="Website" data-es="Sitio Web">Website</h3>
+                            <p>www.maplesmotorsports.org</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <a href="https://www.instagram.com/maples.motorsports/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm" data-aos="fade-left">
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name" data-en="Your Name" data-es="Tu Nombre">Your Name</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email" data-en="Your Email" data-es="Tu Email">Your Email</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" id="subject" required>
+                        <label for="subject" data-en="Subject" data-es="Asunto">Subject</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" rows="5" required></textarea>
+                        <label for="message" data-en="Your Message" data-es="Tu Mensaje">Your Message</label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" data-en="Send Message" data-es="Enviar Mensaje">Send Message</button>
+                    
+                    <div class="form-success" id="formSuccess">
+                        <i class="fas fa-check-circle"></i>
+                        <p data-en="Message sent successfully!" data-es="¡Mensaje enviado exitosamente!">Message sent successfully!</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-number">#99</span>
+                        <span class="logo-text">MAPLES MOTORSPORTS</span>
+                    </div>
+                    <p data-en="Building a competitive ARCA racing team from the ground up." data-es="Construyendo un equipo competitivo de ARCA desde cero.">
+                        Building a competitive ARCA racing team from the ground up.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 data-en="Quick Links" data-es="Enlaces Rápidos">Quick Links</h4>
+                    <a href="#home" data-en="Home" data-es="Inicio">Home</a>
+                    <a href="#about" data-en="About" data-es="Acerca">About</a>
+                    <a href="#stats" data-en="Stats" data-es="Estadísticas">Stats</a>
+                    <a href="#gallery" data-en="Gallery" data-es="Galería">Gallery</a>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 data-en="Team" data-es="Equipo">Team</h4>
+                    <a href="#team" data-en="Our Team" data-es="Nuestro Equipo">Our Team</a>
+                    <a href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
+                    <a href="https://www.maplesmotorsports.org" target="_blank" data-en="Official Site" data-es="Sitio Oficial">Official Site</a>
+                </div>
+                
+                <div class="footer-social">
+                    <h4 data-en="Follow Us" data-es="Síguenos">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/maples.motorsports/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Maples Motorsports. <span data-en="All rights reserved." data-es="Todos los derechos reservados.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
