@@ -92,16 +92,26 @@ function initNavigation() {
 // ==========================================
 function initLanguageSwitcher() {
     const langBtn = document.getElementById('langBtn');
+    const langBtnMobile = document.getElementById('langBtnMobile');
     const currentLangSpan = document.getElementById('currentLang');
-    
-    langBtn.addEventListener('click', () => {
+    const currentLangMobileSpan = document.querySelector('.current-lang-mobile');
+
+    function switchLanguage() {
         currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
         updateLanguage();
-        
-        // Update button
-        currentLangSpan.textContent = currentLanguage.toUpperCase();
-        langBtn.querySelector('.flag-icon').textContent = currentLanguage === 'en' ? '🇺🇸' : '🇪🇸';
-    });
+
+        // Update both buttons
+        const newFlag = currentLanguage === 'en' ? '🇺🇸' : '🇪🇸';
+        const newLang = currentLanguage.toUpperCase();
+
+        if (currentLangSpan) currentLangSpan.textContent = newLang;
+        if (currentLangMobileSpan) currentLangMobileSpan.textContent = newLang;
+        if (langBtn) langBtn.querySelector('.flag-icon').textContent = newFlag;
+        if (langBtnMobile) langBtnMobile.querySelector('.flag-icon').textContent = newFlag;
+    }
+
+    if (langBtn) langBtn.addEventListener('click', switchLanguage);
+    if (langBtnMobile) langBtnMobile.addEventListener('click', switchLanguage);
 }
 
 function updateLanguage() {
@@ -502,6 +512,21 @@ function initCarCarousel() {
     let currentIndex = 0;
     const slideCount = slides.length;
 
+    // Detect if desktop or mobile
+    function isDesktop() {
+        return window.innerWidth > 768;
+    }
+
+    // Get slides per view based on screen size
+    function getSlidesPerView() {
+        return isDesktop() ? 3 : 1;
+    }
+
+    // Get step size for navigation
+    function getStepSize() {
+        return isDesktop() ? 3 : 1;
+    }
+
     // Create indicators
     slides.forEach((_, index) => {
         const indicator = document.createElement('div');
@@ -514,7 +539,16 @@ function initCarCarousel() {
     const indicators = Array.from(document.querySelectorAll('.car-indicator'));
 
     function updateCarousel() {
-        const offset = -currentIndex * 100;
+        let offset;
+
+        if (isDesktop()) {
+            // For desktop: move exactly 100% of container width per group of 3
+            offset = -(currentIndex / 3) * 100;
+        } else {
+            // For mobile: show one image at a time
+            offset = -currentIndex * 100;
+        }
+
         track.style.transform = `translateX(${offset}%)`;
 
         // Update indicators
@@ -529,33 +563,32 @@ function initCarCarousel() {
     }
 
     function nextSlide() {
-        currentIndex = (currentIndex + 1) % slideCount;
+        const stepSize = getStepSize();
+        const maxIndex = slideCount - getSlidesPerView();
+
+        if (currentIndex + stepSize > maxIndex) {
+            currentIndex = 0;
+        } else {
+            currentIndex += stepSize;
+        }
         updateCarousel();
     }
 
     function prevSlide() {
-        currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+        const stepSize = getStepSize();
+
+        if (currentIndex - stepSize < 0) {
+            const maxIndex = slideCount - getSlidesPerView();
+            currentIndex = Math.floor(maxIndex / stepSize) * stepSize;
+        } else {
+            currentIndex -= stepSize;
+        }
         updateCarousel();
     }
 
     // Event listeners
     if (nextBtn) nextBtn.addEventListener('click', nextSlide);
     if (prevBtn) prevBtn.addEventListener('click', prevSlide);
-
-    // Auto-play
-    let autoplayInterval = setInterval(nextSlide, 5000);
-
-    // Pause on hover
-    const carouselWrapper = document.querySelector('.car-carousel-wrapper');
-    if (carouselWrapper) {
-        carouselWrapper.addEventListener('mouseenter', () => {
-            clearInterval(autoplayInterval);
-        });
-
-        carouselWrapper.addEventListener('mouseleave', () => {
-            autoplayInterval = setInterval(nextSlide, 5000);
-        });
-    }
 
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
@@ -584,6 +617,12 @@ function initCarCarousel() {
             prevSlide();
         }
     }
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        currentIndex = 0;
+        updateCarousel();
+    });
 }
 
 // ==========================================
@@ -601,6 +640,21 @@ function initGalleryCarousel() {
     let currentIndex = 0;
     const slideCount = slides.length;
 
+    // Detect if desktop or mobile
+    function isDesktop() {
+        return window.innerWidth > 768;
+    }
+
+    // Get slides per view based on screen size
+    function getSlidesPerView() {
+        return isDesktop() ? 3 : 1;
+    }
+
+    // Get step size for navigation
+    function getStepSize() {
+        return isDesktop() ? 3 : 1;
+    }
+
     // Create indicators
     slides.forEach((_, index) => {
         const indicator = document.createElement('div');
@@ -613,7 +667,17 @@ function initGalleryCarousel() {
     const indicators = Array.from(document.querySelectorAll('.gallery-indicator'));
 
     function updateCarousel() {
-        const offset = -currentIndex * 100;
+        const slidesPerView = getSlidesPerView();
+        let offset;
+
+        if (isDesktop()) {
+            // For desktop: move exactly 100% of container width per group of 3
+            offset = -(currentIndex / 3) * 100;
+        } else {
+            // For mobile: show one image at a time
+            offset = -currentIndex * 100;
+        }
+
         track.style.transform = `translateX(${offset}%)`;
 
         // Update indicators
@@ -628,33 +692,32 @@ function initGalleryCarousel() {
     }
 
     function nextSlide() {
-        currentIndex = (currentIndex + 1) % slideCount;
+        const stepSize = getStepSize();
+        const maxIndex = slideCount - getSlidesPerView();
+
+        if (currentIndex + stepSize > maxIndex) {
+            currentIndex = 0;
+        } else {
+            currentIndex += stepSize;
+        }
         updateCarousel();
     }
 
     function prevSlide() {
-        currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+        const stepSize = getStepSize();
+
+        if (currentIndex - stepSize < 0) {
+            const maxIndex = slideCount - getSlidesPerView();
+            currentIndex = Math.floor(maxIndex / stepSize) * stepSize;
+        } else {
+            currentIndex -= stepSize;
+        }
         updateCarousel();
     }
 
     // Event listeners
     if (nextBtn) nextBtn.addEventListener('click', nextSlide);
     if (prevBtn) prevBtn.addEventListener('click', prevSlide);
-
-    // Auto-play
-    let autoplayInterval = setInterval(nextSlide, 5000);
-
-    // Pause on hover
-    const carouselWrapper = document.querySelector('.gallery-carousel-wrapper');
-    if (carouselWrapper) {
-        carouselWrapper.addEventListener('mouseenter', () => {
-            clearInterval(autoplayInterval);
-        });
-
-        carouselWrapper.addEventListener('mouseleave', () => {
-            autoplayInterval = setInterval(nextSlide, 5000);
-        });
-    }
 
     // Keyboard navigation
     document.addEventListener('keydown', (e) => {
@@ -683,6 +746,12 @@ function initGalleryCarousel() {
             prevSlide();
         }
     }
+
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        currentIndex = 0;
+        updateCarousel();
+    });
 }
 
 // ==========================================
