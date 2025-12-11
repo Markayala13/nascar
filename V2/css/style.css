@@ -111,8 +111,34 @@ button {
     box-shadow: var(--glow-red);
 }
 
+.flag-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.flag-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.flag-item.active {
+    opacity: 1;
+}
+
 .flag-icon {
-    font-size: 20px;
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.flag-label {
+    font-size: 12px;
+    font-weight: 600;
 }
 
 .language-switcher-mobile {
@@ -1462,6 +1488,12 @@ section {
     align-items: center;
     gap: 10px;
     margin-bottom: 20px;
+}
+
+.footer-logo-img {
+    height: 120px;
+    width: auto;
+    object-fit: contain;
 }
 
 .footer-brand p {

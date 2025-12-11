@@ -93,21 +93,20 @@ function initNavigation() {
 function initLanguageSwitcher() {
     const langBtn = document.getElementById('langBtn');
     const langBtnMobile = document.getElementById('langBtnMobile');
-    const currentLangSpan = document.getElementById('currentLang');
-    const currentLangMobileSpan = document.querySelector('.current-lang-mobile');
 
     function switchLanguage() {
         currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
         updateLanguage();
 
-        // Update both buttons
-        const newFlag = currentLanguage === 'en' ? '🇺🇸' : '🇪🇸';
-        const newLang = currentLanguage.toUpperCase();
-
-        if (currentLangSpan) currentLangSpan.textContent = newLang;
-        if (currentLangMobileSpan) currentLangMobileSpan.textContent = newLang;
-        if (langBtn) langBtn.querySelector('.flag-icon').textContent = newFlag;
-        if (langBtnMobile) langBtnMobile.querySelector('.flag-icon').textContent = newFlag;
+        // Update both buttons - toggle active class
+        const flagItems = document.querySelectorAll('.flag-item');
+        flagItems.forEach(item => {
+            if (item.dataset.lang === currentLanguage) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
     }
 
     if (langBtn) langBtn.addEventListener('click', switchLanguage);
