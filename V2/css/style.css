@@ -1678,6 +1678,21 @@ section {
         border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
 
+    .language-switcher-mobile .lang-btn {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 10px;
+    }
+
+    .language-switcher-mobile .flag-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .language-switcher-mobile .flag-label {
+        font-size: 14px;
+    }
+
     .nav-toggle {
         z-index: 10001;
         position: relative;
