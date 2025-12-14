@@ -343,6 +343,9 @@ function initContactForm() {
 
     if (!form) return;
 
+    // Initialize EmailJS with your Public Key
+    emailjs.init('xG8m8azZGL94ju0Im');
+
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
@@ -354,18 +357,48 @@ function initContactForm() {
 
         // Validate
         if (!name || !email || !subject || !message) {
-            alert('Please fill in all fields');
+            alert(currentLanguage === 'en' ? 'Please fill in all fields' : 'Por favor completa todos los campos');
             return;
         }
 
-        // Show success message
-        successMessage.classList.add('show');
-        form.reset();
+        // Disable submit button to prevent multiple submissions
+        const submitBtn = form.querySelector('.submit-btn');
+        const originalText = submitBtn.textContent;
+        submitBtn.disabled = true;
+        submitBtn.textContent = currentLanguage === 'en' ? 'Sending...' : 'Enviando...';
 
-        // Hide success message after 5 seconds
-        setTimeout(() => {
-            successMessage.classList.remove('show');
-        }, 5000);
+        // Send email using EmailJS
+        emailjs.send('service_yafjupw', 'template_8ko99vn', {
+            from_name: name,
+            from_email: email,
+            subject: subject,
+            message: message,
+            to_email: 'contact@maplesmotorsports.com'
+        })
+        .then(() => {
+            // Show success message
+            successMessage.classList.add('show');
+            form.reset();
+
+            // Re-enable submit button
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 5000);
+        })
+        .catch((error) => {
+            console.error('Email send error:', error);
+            alert(currentLanguage === 'en'
+                ? 'Failed to send message. Please try again or contact us directly at contact@maplesmotorsports.com'
+                : 'Error al enviar mensaje. Por favor intenta de nuevo o contáctanos directamente en contact@maplesmotorsports.com');
+
+            // Re-enable submit button
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+        });
     });
 }
 
